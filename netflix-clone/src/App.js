@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import './App.css';
-import List from './components/List';
+import List from './view/List';
 import movies from './moviesDB/moviesDB';
 export const MyContext = createContext();
 
