@@ -1,22 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import './App.css';
+import List from './components/List';
 import movies from './moviesDB/moviesDB';
+export const MyContext = createContext();
 
 function App() {
   
+  const [movieData, setMovieData] = useState([]);
   useEffect(()=>{
     const loadingData = async() => {
       const data = await movies.getMoviesList();
-      console.log(data);
+      setMovieData(data);
     }
     loadingData();
   },[])
 
+
+
   return (
     <div className="App">
+      <MyContext.Provider value={{movieData, setMovieData}}>
+        <List/>
+      </MyContext.Provider>
       
     </div>
   );
 }
+
+
 
 export default App;
