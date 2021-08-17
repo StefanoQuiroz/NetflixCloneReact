@@ -5,7 +5,7 @@ const URL = "https://api.themoviedb.org/3";
 
 const asyncFunc = async (endPoint) => {
     try{
-        const data = await axios.get(`${apiKey}${endPoint}`);
+        const data = await axios.get(`${URL}${endPoint}`);
         return data;
     } catch(error){
         console.log("Error", error);
