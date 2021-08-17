@@ -1,0 +1,27 @@
+###GET MOVIES
+GET https://api.themoviedb.org/3/movie/550?api_key=be2c659c71e603df199901e2e0dad1c8&language=es-ES
+
+###GET SERIES
+GET https://api.themoviedb.org/3/discover/tv?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES
+
+###GET SERIES TRENDING
+GET https://api.themoviedb.org/3/trending/all/week?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES
+
+###GET MOVIE TOP-RATED
+GET https://api.themoviedb.org/3/movie/top_rated?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES
+
+###GET MOVIE-ACTIONS
+GET https://api.themoviedb.org/3/discover/movie?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES&with_genres=28
+
+###GET MOVIE-COMMEDY
+GET https://api.themoviedb.org/3/discover/movie?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES&with_genres=35
+
+###GET MOVIE-TERROR
+GET https://api.themoviedb.org/3/discover/movie?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES&with_genres=27
+
+###GET MOVIE-ROMANCE
+GET https://api.themoviedb.org/3/discover/movie?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES&with_genres=10749
+
+###GET MOVIE-DOCUMMENTARIES
+GET https://api.themoviedb.org/3/discover/movie?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES&with_genres=99
+
