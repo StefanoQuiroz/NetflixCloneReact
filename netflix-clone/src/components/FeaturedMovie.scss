@@ -11,4 +11,67 @@
     width: inherit;
     height: inherit;
     background: linear-gradient(to right, #111 30%, transparent 70%);
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featuredMovie--name{
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.featuredMovie--info{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0.9rem;
+    .featuredMovie--points{
+        display: inline-block;
+        color: #46d369;
+        margin-right: 1rem;
+    };
+    .featuredMovie--year, .featuredMovie--seasons{
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}
+
+.featuredMovie--description{
+    color: #999;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    max-width: 40%;
+}
+
+.featuredMovie--buttons{
+    margin-top: 1.2rem;
+    .button--player, .button--add{
+        display: inline-block;
+        font-size: 1.15rem;
+        font-weight: bold;
+        padding: 0.6rem 1.56rem;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-right: 0.6rem;
+        opacity: 1;
+        transition: all ease 0.2s;
+    }
+    .button--player:hover, .button--add:hover{
+        opacity: 0.7;
+    }
+    .button--player{
+        color: #000;
+        background-color: #fff;
+    }
+    .button--add{
+        color: #fff;
+        background-color: #333;
+    }
+}
+
+.featuredMovie--genres{
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    color: #999;
 }
