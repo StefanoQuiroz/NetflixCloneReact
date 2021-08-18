@@ -16,9 +16,12 @@
     .movieRow--item{
         display: inline-block;
         width: 10rem;
+        cursor: pointer;
         img{
             width: 100%;
             transform: scale(0.88);
+            transition: all ease 0.2s;
+             
             &:hover{
                 transform: scale(1)
             }
