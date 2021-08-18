@@ -17,7 +17,7 @@ const movies = {
     getMoviesList : async () => ([
         {
             slug: "originals",
-            title: "Originales de Netflix",
+            title: "Series originales de Netflix",
             movieList: await asyncFunc(`/discover/tv?api_key=${apiKey}&with_networks=213&language=es-ES`)
         },
         {
