@@ -20,7 +20,7 @@ function App() {
       const movieChoosen = originals[0].movieList.data.results[randomChoosen];
       //console.log(movieChoosen);
       const movieChoosenInfo = await movies.getMovieInfo(movieChoosen.id, 'tv');
-      //console.log(movieChoosenInfo);
+      console.log(movieChoosenInfo);
       setFeaturedData(movieChoosenInfo);
     }
     loadingData();
@@ -30,8 +30,8 @@ function App() {
 
   return (
     <div className="App">
+      {featuredData && <FeaturedMovie item={featuredData}/>}
       <MyContext.Provider value={{movieData, setMovieData}}>
-        {featuredData && <FeaturedMovie featuredData={featuredData}/>}
         <List/>
       </MyContext.Provider>
       
