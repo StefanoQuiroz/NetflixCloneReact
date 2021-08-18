@@ -5,9 +5,9 @@ const MovieRow = (props) => {
     const {title, movieList} = props;
     //console.log("movieList", movieList) //Look at data with axios problem
     return (
-        <div>
+        <div className="movieRow">
             <h1>{title}</h1>
-            <div className="movieRow--listArea">
+            <div className="movieRow-listArea">
                 <div className="movieRow--list">
                     {movieList.data.results && movieList.data.results.map((items, index) => (
                         <div className="movieRow--item" key={index}>
