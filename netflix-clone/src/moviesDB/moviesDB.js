@@ -55,7 +55,22 @@ const movies = {
             title: "Documentales",
             movieList: await asyncFunc(`/discover/movie?api_key=${apiKey}&with_networks=213&language=es-ES&with_genres=99`) 
         },
-    ])
+    ]),
+
+    getMovieInfo : async (id, tipo ) => {
+        // /movie/{movie_id}
+        // /tv/{tv_id}
+        let info = {};
+        if(id){
+            if(tipo === "movie"){
+                info = await asyncFunc(`/movie/${id}?api_key=${apiKey}&language=es-ES`)
+            }
+            if(tipo === "tv"){
+                info = await asyncFunc(`/tv/${id}?api_key=${apiKey}&language=es-ES`)
+            }
+        }
+        return info;
+    }
 }
 
 export default movies;

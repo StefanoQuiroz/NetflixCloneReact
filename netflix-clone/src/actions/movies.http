@@ -25,3 +25,10 @@ GET https://api.themoviedb.org/3/discover/movie?api_key=be2c659c71e603df199901e2
 ###GET MOVIE-DOCUMMENTARIES
 GET https://api.themoviedb.org/3/discover/movie?api_key=be2c659c71e603df199901e2e0dad1c8&with_networks=213&language=es-ES&with_genres=99
 
+######################################################333
+
+###GET /movie/{movie_id}
+GET https://api.themoviedb.org/3/movie/{movie_id}?api_key=be2c659c71e603df199901e2e0dad1c8&language=es-ES
+
+###GET /tv/{tv_id}
+GET https://api.themoviedb.org/3/tv/{tv_id}?api_key=be2c659c71e603df199901e2e0dad1c8&language=es-ES
