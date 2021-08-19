@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 *{
   box-sizing: border-box;
   margin: 0;
@@ -13,4 +12,14 @@ body{
 
 .list{
   margin-top: -11rem;
+}
+
+footer{
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  span{
+    margin: 0rem 0.3rem 0rem 0.1rem;
+  }
 }

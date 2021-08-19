@@ -11,7 +11,7 @@ function App() {
   const [movieData, setMovieData] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false); //para el scroll de la pagina hacia abajo
-
+  const year = new Date();
   useEffect(()=>{
     const loadingData = async() => {
       //Lista
@@ -55,7 +55,10 @@ function App() {
       <MyContext.Provider value={{movieData, setMovieData}}>
         <List/>
       </MyContext.Provider>
-      
+      <footer>
+        Made by J-S Developers <span role="img" aria-label="copy-right"> ©{year.getFullYear()} </span>
+        Derechos de Imagen de Netflix
+      </footer>
     </div>
   );
 }
