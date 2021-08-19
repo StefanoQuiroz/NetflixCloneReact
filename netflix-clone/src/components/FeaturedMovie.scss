@@ -77,3 +77,28 @@
     margin-top: 1.2rem;
     color: #999;
 }
+
+
+//responsive mobile
+@media (max-width: 760px){
+   .featuredMovie{
+       height: 80vh;
+   } 
+   .featuredMovie--name{
+       font-size: 40px;
+   }
+   .featuredMovie--info{
+       font-size: 16px;
+   }
+   .featuredMovie--description{
+       font-size: 14px;
+       max-width: 100%;
+       margin-right: 30px;
+   }
+   .button--player, .button--add{
+       font-size: 16px;
+   }
+   .featuredMovies---genres{
+       font-size: 14px;
+   }
+} 

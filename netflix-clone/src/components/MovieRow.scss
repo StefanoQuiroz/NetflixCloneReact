@@ -1,7 +1,7 @@
 .movieRow{
     margin-bottom: 3rem;
-    h1{
-        margin-left: 3rem;
+    h2{
+        margin-left: 2.5rem;
     }
 }
 .movieRow--listArea{
@@ -9,6 +9,7 @@
 }
 
 .movieRow--list{
+    overflow-x: hidden;
     //width: 1000rem;
     padding-left: 3rem;
     //outline: 1px solid red;
@@ -16,6 +17,7 @@
 }
 
 .movieRow--item{
+    overflow-x: hidden;
     display: inline-block;
     width: 10rem;
     cursor: pointer;
@@ -56,4 +58,11 @@
 
 .movieRow--right{
     right: 0;
+}
+
+//responsive mobile
+@media (max-width: 760px){
+    .movieRow--left, .movieRow--right{
+        opacity: 1;
+    }
 }

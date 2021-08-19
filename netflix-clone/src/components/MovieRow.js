@@ -28,7 +28,7 @@ const MovieRow = (props) => {
 
     return (
         <div className="movieRow">
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <div className="movieRow--left" onClick={buttonLeftArrow}>
                 <NavigateBeforeIcon style={{fontSize: "3rem"}}/>
             </div>
