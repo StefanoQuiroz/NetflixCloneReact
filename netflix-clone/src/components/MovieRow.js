@@ -1,5 +1,7 @@
 import React from 'react';
 import './MovieRow.scss';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const MovieRow = (props) => {
     const {title, movieList} = props;
@@ -7,6 +9,12 @@ const MovieRow = (props) => {
     return (
         <div className="movieRow">
             <h1>{title}</h1>
+            <div className="movieRow--left">
+                <NavigateBeforeIcon style={{fontSize: "3rem"}}/>
+            </div>
+            <div className="movieRow--right">
+                <NavigateNextIcon style={{fontSize: "3rem"}}/>
+            </div>
             <div className="movieRow-listArea">
                 <div className="movieRow--list">
                     {movieList.data.results && movieList.data.results.map((items, index) => (
