@@ -6,6 +6,12 @@ const FeaturedMovie = (props) => {
     const firstDate = new Date(item.data.first_air_date);
     const genres = [];
     item.data.genres.map(item => genres.push(item.name));
+
+    let overview = item.data.overview;
+    if(overview.length > 200){
+        overview = overview.substring(0,200)+"...";
+    }
+
     return (
         <section className="featuredMovie" style={{
             backgroundSize: 'cover', //para cualquier dimension de la pantalla
@@ -20,7 +26,7 @@ const FeaturedMovie = (props) => {
                         <div className="featuredMovie--year">{firstDate.getFullYear()}</div>
                         <div className="featuredMovie--seasons">{item.data.number_of_seasons} temporada{item.data.number_of_seasons > 1 ? 's' : ''}</div>
                     </div>
-                    <div className="featuredMovie--description">{item.data.overview}</div>
+                    <div className="featuredMovie--description">{overview}</div>
                     <div className="featuredMovie--buttons">
                         <a className="button--player" href={`/watch/${item.data.id}`}>► Ver</a>
                         <a className="button--add" href={`/list/add/${item.data.id}`}>+ Mi Lista</a>
