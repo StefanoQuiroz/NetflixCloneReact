@@ -3,12 +3,15 @@ import './App.scss';
 import List from './view/List';
 import movies from './moviesDB/moviesDB';
 import FeaturedMovie from './components/FeaturedMovie';
+import Header from './components/Header';
 export const MyContext = createContext();
 
 function App() {
   
   const [movieData, setMovieData] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false); //para el scroll de la pagina hacia abajo
+
   useEffect(()=>{
     const loadingData = async() => {
       //Lista
@@ -26,10 +29,28 @@ function App() {
     loadingData();
   },[])
 
+  //Para monitorear la pagina 
+  useEffect(()=>{
+    const scrollListener = () => {
+      if(window.scrollY > 10){
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener); //cuando tenenmos un eventlistener scroll ejecutamos la funcion scrollListener
+    //Para remover ese eventListener
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+
 
 
   return (
     <div className="App">
+      <Header black={blackHeader}/>
       {featuredData && <FeaturedMovie item={featuredData}/>}
       <MyContext.Provider value={{movieData, setMovieData}}>
         <List/>
