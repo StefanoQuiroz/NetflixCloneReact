@@ -4,6 +4,8 @@ import List from './view/List';
 import movies from './moviesDB/moviesDB';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+import { GiFalconMoon } from "react-icons/gi";
+
 export const MyContext = createContext();
 
 function App() {
@@ -56,7 +58,7 @@ function App() {
         <List/>
       </MyContext.Provider>
       <footer>
-        Made by J-S Developers <span role="img" aria-label="copy-right"> ©{year.getFullYear()} </span>
+        Made by J-S Developers <span role="img" aria-label="copy-right"> <GiFalconMoon style={{marginRight: "0.2rem"}}/>©{year.getFullYear()} </span>
         Derechos de Imagen de Netflix
       </footer>
     </div>
