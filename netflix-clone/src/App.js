@@ -18,6 +18,7 @@ function App() {
     const loadingData = async() => {
       //Lista
       const data = await movies.getMoviesList();
+      //momentaneamente ... setMovieData(data);
       setMovieData(data);
       //Featured
       const originals = data.filter(item => item.slug === "originals");
@@ -26,6 +27,7 @@ function App() {
       //console.log(movieChoosen);
       const movieChoosenInfo = await movies.getMovieInfo(movieChoosen.id, 'tv');
       console.log(movieChoosenInfo);
+      //momentaneamente ... setFeaturedData(movieChoosenInfo);
       setFeaturedData(movieChoosenInfo);
     }
     loadingData();
@@ -61,6 +63,11 @@ function App() {
         Made by J-S Developers <span role="img" aria-label="copy-right"> <GiFalconMoon style={{marginRight: "0.2rem"}}/>©{year.getFullYear()} </span>
         Derechos de Imagen de Netflix
       </footer>
+      {movieData.length < 1 && 
+        <div className="loading">
+          <img src="https://media.wired.com/photos/592744d3f3e2356fd800bf00/master/w_2240,c_limit/Netflix_LoadTime.gif" alt="loading" />
+        </div>
+      }
     </div>
   );
 }

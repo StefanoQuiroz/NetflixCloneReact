@@ -9,9 +9,10 @@
 }
 
 .movieRow--list{
-    width: 1000rem;
+    //width: 1000rem;
     padding-left: 3rem;
     //outline: 1px solid red;
+    transition: all ease 0.5s;
 }
 
 .movieRow--item{
