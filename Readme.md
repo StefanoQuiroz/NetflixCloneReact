@@ -10,4 +10,19 @@ Proyecto inspirado en Netflix en su diseño, agregandole un listado personalizad
 
 </p>
 
-Using API from www.themoviedb.org
+# Instrucciones
+
+```sh
+1. git clone https://github.com/StefanoQuiroz/NetflixCloneReact.git
+2. cd netflix-clone
+3. npm i
+4. npm run start
+```
+
+# Link
+
+<p align="left">
+
+https://netflix-clone-64280.web.app/
+
+</p>
