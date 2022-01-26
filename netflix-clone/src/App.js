@@ -60,7 +60,7 @@ function App() {
         <List/>
       </MyContext.Provider>
       <footer>
-        Made by J-S Developers <span role="img" aria-label="copy-right"> <GiFalconMoon style={{marginRight: "0.2rem"}}/>©{year.getFullYear()} </span>
+        Hecho por Joaquín Maúrtua & Stefano Quiroz <span role="img" aria-label="copy-right"> <GiFalconMoon style={{marginRight: "0.2rem"}}/>©{year.getFullYear()} </span>
         Derechos de Imagen de Netflix
       </footer>
       {movieData.length < 1 && 
